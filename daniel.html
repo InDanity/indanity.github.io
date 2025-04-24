@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daniel Onyema - Resume</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+    header {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+    }
+    header h1 {
+      margin: 0;
+    }
+    .contact {
+      text-align: center;
+      margin-top: 0.5rem;
+    }
+    .container {
+      max-width: 800px;
+      margin: 2rem auto;
+      background-color: white;
+      padding: 2rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 10px;
+    }
+    h2 {
+      border-bottom: 2px solid #333;
+      padding-bottom: 0.3rem;
+    }
+    ul {
+      list-style-type: disc;
+      margin-left: 20px;
+    }
+    .project, .experience {
+      margin-bottom: 1.5rem;
+    }
+    .toggle-section {
+      cursor: pointer;
+      color: #007BFF;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Daniel Onyema</h1>
+    <div class="contact">
+      Worcester, MA | 774-502-6639 | <a href="mailto:donyemahn@gmail.com" style="color:white;">donyemahn@gmail.com</a><br>
+      <a href="https://github.com/InDanity" target="_blank" style="color:white;">GitHub</a> |
+      <a href="https://www.linkedin.com/in/donyema24" target="_blank" style="color:white;">LinkedIn</a>
+    </div>
+  </header>
+
+  <div class="container">
+    <h2>Education</h2>
+    <p><strong>Worcester Polytechnic Institute (WPI), Worcester, MA</strong><br>
+    B.S. in Computer Science, May 2024<br>
+    M.S. in Computer Science, May 2025</p>
+
+    <h2>Skills</h2>
+    <p><strong>Programming Languages:</strong> Java, C, C++, C#/.NET, Python, Javascript, HTML, CSS, R</p>
+    <p><strong>Software and Tools:</strong> React, OracleSQL, MySQL, SQLite, IntelliJ IDE, Visual Studio Code, Visual Studio, Eclipse IDE, Jupyter, GitHub, Git Bash, Gradle, Trello, Jira, SOLIDWORKS</p>
+
+    <h2 class="toggle-section" onclick="toggleVisibility('experience')">Experience (Click to Expand/Collapse)</h2>
+    <div id="experience">
+      <div class="experience">
+        <strong>Student Intern, Metrowest Law Firm</strong> (Jun 2024 - Present)
+        <ul>
+          <li>Developed a robust, full-stack web application to automate litigation tasks via an AI API.</li>
+          <li>Utilized SQLAlchemy for database CRUD operations.</li>
+          <li>Automated legal document generation using PyMuPDF and OpenAI API.</li>
+          <li>Deployed on Heroku, enhancing workflow efficiency for MWLF employees.</li>
+        </ul>
+      </div>
+
+      <div class="experience">
+        <strong>Student Intern, WPI Office of Diversity, Inclusion, and Multicultural Education</strong> (Aug 2023 - Present)
+        <ul>
+          <li>Supervised and supported event operations at ODIME facilities.</li>
+          <li>Promoted facility utilization and maintained space readiness.</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2 class="toggle-section" onclick="toggleVisibility('projects')">Projects (Click to Expand/Collapse)</h2>
+    <div id="projects">
+      <div class="project">
+        <strong>Training Diabetes Prediction Regression Models, WPI</strong> (Nov 2024)
+        <ul>
+          <li>Classified BRFSS survey responses for diabetes prediction.</li>
+          <li>Trained and evaluated 5 regression models with boosting techniques.</li>
+          <li>Utilized explainability tools for feature importance analysis.</li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <strong>EDA and Classification of Screening Mammography Dataset, WPI</strong> (Sept 2024)
+        <ul>
+          <li>Analyzed and classified breast cancer screening images.</li>
+          <li>Trained 5 models using stacking, grid search, and gradient boosting.</li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <strong>Hypothetical Hospital Database Management Program, WPI</strong> (Oct 2023 - Dec 2023)
+        <ul>
+          <li>Developed database reporting for a hypothetical hospital using Oracle SQL and Java.</li>
+          <li>Designed ER models and implemented relational queries.</li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <strong>Software Engineering Project with Brigham & Women’s Hospital, WPI</strong> (Jan 2022 - Mar 2022)
+        <ul>
+          <li>Collaborated on a medical equipment tracking app with Agile Scrum methodology.</li>
+          <li>Led requirements gathering, user story creation, and UML subsystem design.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleVisibility(sectionId) {
+      const section = document.getElementById(sectionId);
+      if (section.style.display === "none") {
+        section.style.display = "block";
+      } else {
+        section.style.display = "none";
+      }
+    }
+    // Initially hide sections
+    document.getElementById('experience').style.display = "none";
+    document.getElementById('projects').style.display = "none";
+  </script>
+</body>
+</html>
